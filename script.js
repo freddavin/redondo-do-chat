@@ -26,7 +26,6 @@ function drop(ev) {
     console.log("Destino: " + ev.target.id); // destino
 
     if (ev.target.id.substr(0, 7) === "pickBox" && boxImgs[index].count > 0) {
-        console.log("alooooooooooo");
         let nodeCopy = document.getElementById(data).cloneNode(true);
         if (nodeCopy.id.substr(-4) !== "Copy") {
             nodeCopy.id = document.getElementById(data).id + "Copy";
@@ -34,19 +33,19 @@ function drop(ev) {
         ev.target.appendChild(nodeCopy);
         boxImgs[index].count--;
         boxImgs[index].destinoAtual = ev.target;
-        document.getElementById(data).style.opacity = 0.2;
+        //document.getElementById(data).style.opacity = 0.2;
+        document.getElementById(data).src = `./images/${data}_selected.png`;
 
     } else if (ev.target.id.substr(0, 7) === "pickBox" && data.substr(-4) === "Copy") { //trocar de lugar
-        console.log("aaaaaaaaaaaaaaaaa");
         let nodeCopy = document.getElementById(data).cloneNode(true);
         document.getElementById(data).remove();
         ev.target.appendChild(nodeCopy);
         boxImgs[index].destinoAtual = ev.target;
 
     } else if (ev.target.id.substr(0, 4) === "drop" && ev.target.id.substr(-4) === "Copy") { // trocar por cima do outro
-        console.log("bbbbbbbbbbbbb");
         let indexDestino = boxImgs.findIndex(box => box.name === ev.target.id.substr(0, 7));
-        document.getElementById(ev.target.id.substr(0, 7)).style.opacity = 1;
+        //document.getElementById(ev.target.id.substr(0, 7)).style.opacity = 1;
+        document.getElementById(ev.target.id.substr(0, 7)).src = `./images/${ev.target.id.substr(0, 7)}.png`;
         ev.target.remove();
         boxImgs[indexDestino].count++;       
 
@@ -62,13 +61,14 @@ function drop(ev) {
             boxImgs[indexDestino].destinoAtual.appendChild(nodeCopy);
             boxImgs[index].destinoAtual = boxImgs[indexDestino].destinoAtual;
             boxImgs[indexDestino].destinoAtual = "";
-            document.getElementById(data).style.opacity = 0.2;
+            //document.getElementById(data).style.opacity = 0.2;
+            document.getElementById(data).src = `./images/${data}_selected.png`;
             boxImgs[index].count--;
         }      
 
     } else if (ev.target.id.substr(0, 7) !== "pickBox" && data.substr(-4) === "Copy") { // jogar pra fora pra deletar
-        console.log("cccccccccccccc");
-        document.getElementById(data.substr(0, 7)).style.opacity = 1;
+        //document.getElementById(data.substr(0, 7)).style.opacity = 1;
+        document.getElementById(data.substr(0, 7)).src = `./images/${data.substr(0, 7)}.png`;
         document.getElementById(data).remove();
         boxImgs[index].count++;
     }

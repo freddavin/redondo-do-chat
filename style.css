@@ -18,11 +18,10 @@ html {
 }
 
 .img-box {
-    display: flex;
     /* background-color: rgb(77, 77, 77); */
     width: 100px;
     /* min-width: 100px; */
-    height: 80px;
+    height: 75px;
     /* border: 1px solid black; */
 }
 
@@ -48,11 +47,10 @@ html {
 }
 
 .mid-img-box {
-    display: flex;
     /* background-color: rgb(77, 77, 77); */
     width: 250px;
     /* min-width: 100px; */
-    height: 200px;
+    height: 188px;
     border: 2px dashed rgb(168, 168, 168);
     border-radius: 20px;
 }
