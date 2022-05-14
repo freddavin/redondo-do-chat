@@ -1,4 +1,4 @@
-body {
+html {
     background: rgb(43, 43, 43);
     background: linear-gradient(30deg, rgba(43, 43, 43, 1) 0%, rgba(100, 110, 112, 1) 100%);
     color: white;
