@@ -6,15 +6,23 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.top-parent-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .top-parent {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    width: min-content;
     padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-bottom: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .img-box {
@@ -53,6 +61,8 @@ html {
     height: 188px;
     border: 2px dashed rgb(168, 168, 168);
     border-radius: 20px;
+    font-size: 130px;
+    text-align: center ;
 }
 
 .mid-left-content-parent {
@@ -93,8 +103,8 @@ html {
 .bottom-parent {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 140px;
 }
 
 .bottom-text {
@@ -106,9 +116,6 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 20px;
     padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-bottom: 40px;
 }
