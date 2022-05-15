@@ -5,4 +5,4 @@ Link: https://freddavin.github.io/redondo-do-chat/
   Preview:
 <p>
 
-![image](https://user-images.githubusercontent.com/36649420/168453443-8dac5366-9fb6-4307-97e0-6e85c8146d6f.png)
+![image](https://user-images.githubusercontent.com/36649420/168454909-a5049d82-b65f-490c-b9a8-d844f81eedbf.png)
