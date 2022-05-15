@@ -22,8 +22,8 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     let data = ev.dataTransfer.getData("text");
-    //console.log("Origem: " + data); // origem
-    //console.log("Destino: " + ev.target.id); // destino
+    console.log("Origem: " + data); // origem
+    console.log("Destino: " + ev.target.id); // destino
 
     if (ev.target.id.substr(0, 7) === "pickBox" && boxImgs[index].count > 0) {
         mudarLayout(ev.target.id, true);
@@ -45,7 +45,7 @@ function drop(ev) {
         ev.target.appendChild(nodeCopy);
         boxImgs[index].destinoAtual = ev.target;
 
-    } else if (ev.target.id.substr(0, 4) === "drop" && ev.target.id.substr(-4) === "Copy") { // trocar por cima do outro
+    } else if (ev.target.id.substr(0, 4) === "drop" && ev.target.id.substr(-4) === "Copy" && data !== ev.target.id.substr(0, 7)) { // trocar por cima do outro
         let indexDestino = boxImgs.findIndex(box => box.name === ev.target.id.substr(0, 7));
         //document.getElementById(ev.target.id.substr(0, 7)).style.opacity = 1;
         document.getElementById(ev.target.id.substr(0, 7)).src = `./images/${ev.target.id.substr(0, 7)}.png`;
@@ -59,7 +59,7 @@ function drop(ev) {
             mudarLayout(boxImgs[index].destinoAtual.id, false);
             boxImgs[index].destinoAtual = boxImgs[indexDestino].destinoAtual;
             boxImgs[indexDestino].destinoAtual = "";
-        } else { //o time tava na lista de cima dos times
+        } else { //o time estava na lista de cima dos times
             let nodeCopy = document.getElementById(data).cloneNode(true);
             nodeCopy.id = document.getElementById(data).id + "Copy";
             boxImgs[indexDestino].destinoAtual.appendChild(nodeCopy);
@@ -76,7 +76,7 @@ function drop(ev) {
         document.getElementById(data).remove();
         boxImgs[index].count++;
         mudarLayout(boxImgs[index].destinoAtual.id, false);
-    }
+    } 
 }
 
 function mudarLayout(target, padrao) {
