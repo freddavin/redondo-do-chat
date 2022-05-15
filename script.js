@@ -79,16 +79,18 @@ function drop(ev) {
     } 
 }
 
-function mudarLayout(target, padrao) {
-    if (padrao) {
+function mudarLayout(target, modificado) {
+    if (modificado) {
         document.getElementById(target).innerHTML = "";
         document.getElementById(target).style.border = "2px solid rgb(38, 121, 63)";
         document.getElementById(target).style.boxShadow = "1px 1px 10px 1px rgb(38, 121, 63)";
         document.getElementById(target).style.background = "radial-gradient(circle, rgba(100,110,112,0.9023984593837535) 0%, rgba(76,81,82,1) 100%)";
+        document.getElementById(target).style.opacity = 1;
     } else {
         document.getElementById(target).innerHTML = "?";
         document.getElementById(target).style.border = "2px dashed rgb(168, 168, 168)";
         document.getElementById(target).style.boxShadow = "";
         document.getElementById(target).style.background = "";
+        document.getElementById(target).style.opacity = 0.5;
     }
 }

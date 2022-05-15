@@ -1,15 +1,40 @@
+@font-face {
+    font-family: "stratum2-regular";
+    src: url("./fonts/stratum2-regular-webfont.eot");
+    src: url("./fonts/stratum2-regular-webfont.eot?#iefix") format('embedded-opentype'),
+    url("./fonts/stratum2-regular-webfont.woff") format("woff"),
+    url("./fonts/stratum2-regular-webfont.ttf") format("truetype"),
+    url("./fonts/stratum2-regular-webfont.svg#stratum2-regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    }
+
 html {
-    background: rgb(43, 43, 43);
-    background: linear-gradient(30deg, rgba(43, 43, 43, 1) 0%, rgba(100, 110, 112, 1) 100%);
+    /* background: rgb(43, 43, 43); */
+    /* background: linear-gradient(30deg, rgba(43, 43, 43, 1) 0%, rgba(100, 110, 112, 1) 100%); */
+    background-image: url("./images/background.jpg");
+    background-size: cover;
     color: white;
     margin: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: stratum2-regular;
 }
 
 .top-parent-all {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
+}
+
+.top-parent-text {
+    font-style: italic;
+    font-size: 20px;
+    background-color: rgba(49, 47, 47, 0.3);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .top-parent {
@@ -18,7 +43,7 @@ html {
     align-items: center;
     justify-content: center;
     width: min-content;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -56,8 +81,9 @@ html {
     height: 150px;
     border: 2px dashed rgb(168, 168, 168);
     border-radius: 20px;
-    font-size: 100px;
-    text-align: center ;
+    font-size: 130px;
+    text-align: center;
+    opacity: 0.5;
 }
 
 .mid-left-content-parent {
@@ -88,6 +114,7 @@ html {
 
 .mid-frag-text {
     font-size: 80px;
+    opacity: 0.5;
 }
 
 .mid-text-left {
